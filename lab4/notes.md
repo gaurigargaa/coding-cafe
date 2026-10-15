@@ -38,3 +38,30 @@
          - They act as a unique reference or "fingerprint" for that specific commit in my repository.
          - Easy Reference: Instead of typing or copying the full 40-character SHA-1 hash, I can use these first 7 characters with Git commands to   identify and interact with that commit.
 
+9. You now have two commits. Without looking it up: what are the four steps of the loop you just did twice?
+    Ans: The four steps of the loop (the edit-stage-commit cycle) are:
+         - Edit / Create: Make changes to your files or create new files in your working directory.   
+         - Status: Run git status to see what changes were made and what files are untracked or modified.   
+         - Stage: Run git add <file> to move the changes you want to save into the staging area.   
+         - Commit: Run git commit -m "message" to create a permanent snapshot of those staged changes in your repository history. 
+
+10. Why does this file get a special name and a special place, rather than being called notes.md like everything else?
+    Ans: Here is why README.md gets a special name and place in the root folder:   
+         - Standard convention: README is a universally recognized standard across software development and platforms like GitHub, GitLab, and Bitbucket.   
+         - Automatic rendering: Platforms automatically look for README.md in the root directory of a repository and display its contents as the main homepage/documentation for the project.   
+         - First point of contact: Keeping it in the root folder named README.md ensures anyone opening your project immediately sees an overview, setup instructions, and table of contents before diving into subfolders. 
+
+11. What did gh auth login do that means you will not be asked for a password when you push?
+    Ans: Running gh auth login authenticates your computer with GitHub and stores a secure personal access token (or SSH key) in your system's credential manager. Because Git is configured to use the GitHub CLI as its credential helper, whenever you run git push, Git automatically uses this stored token to authenticate you seamlessly in the background without needing you to type your password every time.
+
+12. Refresh the repository page on GitHub. What is showing on the front page, and why that file?
+    Ans: I see READEME.nd
+    Automatic Rendering: GitHub is built to automatically search for a file named README.md in the root folder of any repository and render its Markdown formatting as the project's landing page.
+    Standard Project Homepage: It serves as the front documentation for your repository, giving visitors an immediate summary, instructions, and overview of your work without them having to click into subfolders.
+
+13. Run git log --oneline again. Did pushing change your local history in any way?
+    Ans: No, pushing did not change your local history.
+
+14. Your repository is private but your TAs can now read it. In your own words, what is the difference between a repository being private and a repository not existing on GitHub at all?
+    Ans: A private repository exists on GitHub's servers and holds all your files and commit history, but access is restricted so only you and the specific collaborators you invite (like your TAs) can see or interact with it.
+    If a repository does not exist on GitHub at all, there is no remote copy on the web—your code lives solely on your local computer, and no one else can view, clone, or access it through GitHub.
